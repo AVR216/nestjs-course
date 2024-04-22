@@ -1,0 +1,47 @@
+GET http://localhost:3000/tasks?limit=5
+
+### Find a task by id
+GET http://localhost:3000/tasks/0
+
+### Create task
+POST http://localhost:3000/tasks
+Content-Type: application/json
+
+{
+    "title": "abc",
+    "status": true,
+    "age": 30
+}
+
+### Update task
+PUT http://localhost:3000/tasks
+Content-Type: application/json
+
+{
+    "title": "tarea 4",
+    "status": false   
+}
+
+### Greet to prove custom pipe and Guard
+GET http://localhost:3000/projects/greet?name=Jhon&age=25
+//Authorization: abc
+
+### Users - say hello to test middleware
+GET http://localhost:3000/users/say-hello
+Authorization: xyz123
+
+### Get users from db
+GET http://localhost:3000/users
+Authorization: xyz123
+
+### Create user
+POST  http://localhost:3000/users
+Authorization: xyz123
+Content-Type: application/json
+
+{
+    "email": "John@gmail.com",
+    "name": "John Doe",
+    "password": "12345"
+}
+
